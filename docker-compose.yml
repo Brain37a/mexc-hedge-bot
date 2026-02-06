@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hedge-bot:
+    build: .
+    container_name: mexc_hedge_bot
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
